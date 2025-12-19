@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
 
   const [menu, setMenu] = useState("Home")
 
@@ -13,33 +14,33 @@ const Navbar = () => {
 
       {/* Menu */}
       <ul className="navbar-menu">
-        <li
+        <Link to='/'
           className={menu === "Home" ? "active" : ""}
           onClick={() => setMenu("Home")}
         >
           Home
-        </li>
+        </Link>
 
-        <li
+        <a href='#explore-menu'
           className={menu === "Menu" ? "active" : ""}
           onClick={() => setMenu("Menu")}
         >
           Menu
-        </li>
+        </a>
 
-        <li
+        <a href='#app-download'
           className={menu === "Mobile-App" ? "active" : ""}
           onClick={() => setMenu("Mobile-App")}
         >
           Mobile App
-        </li>
+        </a>
 
-        <li
+        <a href='#footer'
           className={menu === "Contact-Us" ? "active" : ""}
           onClick={() => setMenu("Contact-Us")}
         >
           Contact Us
-        </li>
+        </a>
       </ul>
 
       {/* Right Section */}
@@ -51,7 +52,7 @@ const Navbar = () => {
           <div className="dot"></div>
         </div>
 
-        <button>Sign In</button>
+        <button onClick={()=>setShowLogin(true)}>Sign In</button>
       </div>
     </div>
   )

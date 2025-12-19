@@ -76,3 +76,13 @@
   border-top: 1px solid #333;
   padding-top: 15px;
 }
+@media (max-width:750px){
+  .footer-content{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  .footer-copyright{
+     text-align: center;
+  }
+}
