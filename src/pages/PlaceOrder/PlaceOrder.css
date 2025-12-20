@@ -1,0 +1,111 @@
+.place-order {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* LEFT SECTION */
+.place-order-left {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+
+  border: 1px solid #e5e7eb;
+}
+
+.place-order-left .title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 25px;
+}
+
+/* INPUTS */
+.place-order-left input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+
+  font-size: 14px;
+  outline: none;
+}
+
+.place-order-left input:focus {
+  border-color: #c2410c;
+}
+
+/* MULTI FIELDS */
+.multi-fields {
+  display: flex;
+  gap: 15px;
+}
+
+/* RIGHT SECTION */
+.place-order-right {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+
+  border: 1px solid #e5e7eb;
+  height: fit-content;
+}
+
+/* CART TOTAL */
+.cart-total h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+
+  font-size: 14px;
+  color: #374151;
+}
+
+.cart-total hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* BUTTON */
+.cart-total button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+
+  background-color: #c2410c;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.cart-total button:hover {
+  background-color: #9a3412;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .place-order {
+    grid-template-columns: 1fr;
+  }
+}

@@ -81,7 +81,7 @@
 
 .food-item-img-container .add:hover {
     transform: scale(1.1);
-    background: #17634a;
+    background: tomato;
 }
 
 /* Counter */

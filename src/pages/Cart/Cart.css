@@ -1,0 +1,206 @@
+/* =========================
+   CART PAGE – CLASSIC STYLE
+   ========================= */
+
+.cart {
+    margin-top: 100px;
+    padding: 0 50px 60px;
+    background-color: #f5f3ef;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* ---------- ITEMS TABLE ---------- */
+
+.cart-items {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.cart-items-title {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr 1fr 1fr 1fr 0.6fr;
+    align-items: center;
+    color: #6a6a6a;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.cart-items hr {
+    margin: 16px 0;
+    border: none;
+    height: 1px;
+    background-color: #e0dedb;
+}
+
+.cart-items-item {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr 1fr 1fr 1fr 0.6fr;
+    align-items: center;
+    padding: 14px 0;
+    font-size: 14px;
+    color: #2f2f2f;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-items-item:last-child {
+    border-bottom: none;
+}
+
+.cart-items-item img {
+    width: 58px;
+    height: 58px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+/* ---------- REMOVE BUTTON (FULLY NEW) ---------- */
+
+.cart-items-item .cross {
+    justify-self: center;      /* horizontally center in column */
+    align-self: center;        /* vertically center in row */
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;             /* center x inside circle */
+    align-items: center;
+    justify-content: center;
+
+    background-color: #efe7de;
+    color: #6b4a2f;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #d5c2b3;
+
+    transition: all 0.25s ease;
+}
+
+.cart-items-item .cross:hover {
+    background-color: #6b4a2f;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+
+/* ---------- CART BOTTOM ---------- */
+
+.cart-bottom {
+    margin-top: 70px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+/* ---------- CART TOTAL ---------- */
+
+.cart-total {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 26px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.cart-total h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #4a3b2a;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #555;
+    margin: 12px 0;
+}
+
+.cart-total hr {
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+    background-color: #e0dedb;
+}
+
+.cart-total button {
+    margin-top: 22px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #8b5e3c;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-total button:hover {
+    background-color: #6f4a2e;
+}
+
+/* ---------- PROMO CODE ---------- */
+
+.cart-promocode {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 26px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.cart-promocode p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.cart-promocode-input {
+    display: flex;
+    background-color: #f1ede7;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.cart-promocode-input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px;
+    background: transparent;
+    font-size: 14px;
+}
+
+.cart-promocode-input button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #3f3f3f;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-promocode-input button:hover {
+    background-color: #000000;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width:750px){
+     .cart-bottom{
+        flex-direction: column-reverse;
+     }
+     .cart-promocode{
+        justify-content: start;
+     }
+}

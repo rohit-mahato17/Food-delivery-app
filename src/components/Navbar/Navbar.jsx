@@ -1,41 +1,48 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import { StoreContext } from '../../context/StoreContext'
 
-const Navbar = ({setShowLogin}) => {
+const Navbar = ({ setShowLogin }) => {
 
   const [menu, setMenu] = useState("Home")
+  const { getTotalCartAmount } = useContext(StoreContext)
 
   return (
     <div className="navbar">
-      {/* Logo */}
-      <img src={assets.logo} alt="App Logo" className="logo" />
 
-      {/* Menu */}
+      <Link to="/">
+        <img src={assets.logo} alt="App Logo" className="logo" />
+      </Link>
+
       <ul className="navbar-menu">
-        <Link to='/'
+        <Link
+          to="/"
           className={menu === "Home" ? "active" : ""}
           onClick={() => setMenu("Home")}
         >
           Home
         </Link>
 
-        <a href='#explore-menu'
+        <a
+          href="#explore-menu"
           className={menu === "Menu" ? "active" : ""}
           onClick={() => setMenu("Menu")}
         >
           Menu
         </a>
 
-        <a href='#app-download'
+        <a
+          href="#app-download"
           className={menu === "Mobile-App" ? "active" : ""}
           onClick={() => setMenu("Mobile-App")}
         >
           Mobile App
         </a>
 
-        <a href='#footer'
+        <a
+          href="#footer"
           className={menu === "Contact-Us" ? "active" : ""}
           onClick={() => setMenu("Contact-Us")}
         >
@@ -48,11 +55,14 @@ const Navbar = ({setShowLogin}) => {
         <img src={assets.search_icon} alt="Search" />
 
         <div className="navbar-search-icon">
-          <img src={assets.basket_icon} alt="Cart" />
-          <div className="dot"></div>
+          <Link to="/cart">
+            <img src={assets.basket_icon} alt="Cart" />
+          </Link>
+
+          <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>
 
-        <button onClick={()=>setShowLogin(true)}>Sign In</button>
+        <button onClick={() => setShowLogin(true)}>Sign In</button>
       </div>
     </div>
   )
