@@ -18,7 +18,6 @@ A modern and responsive **Food Delivery Web Application** built using **React**.
 This project focuses on a clean UI, smooth user experience, cart management, and scalable architecture.
 
 ---
-
 ## 🚀 Project Overview
 
 This Food Delivery App allows users to:
